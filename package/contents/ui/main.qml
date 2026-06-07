@@ -28,11 +28,12 @@ PlasmoidItem {
     preferredRepresentation: fullRepresentation
     fullRepresentation: Item {
 
-        // applet default size
-        Layout.minimumWidth: container.implicitWidth
-        Layout.minimumHeight: container.implicitHeight
-        Layout.preferredWidth: Layout.minimumWidth
-        Layout.preferredHeight: Layout.minimumHeight
+        // Set a flexible layout that lets you resize the box on your desktop
+        implicitWidth: 400
+        implicitHeight: 200
+
+        Layout.minimumWidth: 100
+        Layout.minimumHeight: 50
 
         // Updating time every minute (or second if format includes seconds)
         Plasma5Support.DataSource {
@@ -126,69 +127,76 @@ PlasmoidItem {
             
         }
 
-        // Main Content
-        Column {
+        // Main Content Container
+        Item {
             id: container
-
-            // Column settings
             anchors.centerIn: parent
-            spacing: 5
+            width: parent.width
+            height: parent.height
 
-            width: Math.max(
-                display_day.implicitWidth,
-                display_date.implicitWidth,
-                display_time.implicitWidth
-            )
-
-            // The day ("Tuesday", "Wednesday" etc..)
+            // 1. The Day Name
             PlasmaComponents.Label {
                 id: display_day
-                
-                // visible
                 visible: plasmoid.configuration.show_day
+                anchors.top: parent.top
+                anchors.horizontalCenter: parent.horizontalCenter
+                width: parent.width
+                horizontalAlignment: Text.AlignHCenter
 
-                // font settings
+                // FIX: Explicitly limit the height of the label to cut off the font padding
+                // This forces the "container" to end where the letters end
+                height: implicitHeight * 0.75
+
                 font.pixelSize: plasmoid.configuration.day_font_size
                 font.letterSpacing: plasmoid.configuration.day_letter_spacing
                 font.family: plasmoid.configuration.fontFamilyDay || font_anurati.name
                 color: plasmoid.configuration.day_font_color
-                //anchors.horizontalCenter: parent.horizontalCenter
-                width: parent.width
-                horizontalAlignment: Text.AlignHCenter 
+                style: Text.Outline
+                styleColor: "black"
+
+                fontSizeMode: Text.Fit
+                minimumPixelSize: 12
             }
 
-            // The Date
+            // 2. The Date
             PlasmaComponents.Label {
                 id: display_date
-
-                // visibility
                 visible: plasmoid.configuration.show_date
 
-                // font settings
+                // FIX: Anchor to the bottom of the (now smaller) Day label
+                // And use a more aggressive margin to pull it up
+                anchors.top: display_day.bottom
+                anchors.topMargin: -10
+
+                anchors.horizontalCenter: parent.horizontalCenter
+                width: parent.width
+                horizontalAlignment: Text.AlignHCenter
+
                 font.pixelSize: plasmoid.configuration.date_font_size
                 font.letterSpacing: plasmoid.configuration.date_letter_spacing
                 font.family: plasmoid.configuration.fontFamilyDate || font_poppins.name
                 color: plasmoid.configuration.date_font_color
-                //anchors.horizontalCenter: parent.horizontalCenter
-                width: parent.width
-                horizontalAlignment: Text.AlignHCenter 
+                style: Text.Outline
+                styleColor: "black"
             }
 
-            // The Time
+            // 3. The Time
             PlasmaComponents.Label {
                 id: display_time
-
-                // visibility
                 visible: plasmoid.configuration.show_time
+                // Anchor to the BOTTOM of the Date label
+                anchors.top: display_date.bottom
+                anchors.topMargin: 0
+                anchors.horizontalCenter: parent.horizontalCenter
+                width: parent.width
+                horizontalAlignment: Text.AlignHCenter
 
-                // font settings
                 font.pixelSize: plasmoid.configuration.time_font_size
                 font.family: plasmoid.configuration.fontFamilyTime || font_poppins.name
                 color: plasmoid.configuration.time_font_color
                 font.letterSpacing: plasmoid.configuration.time_letter_spacing
-                //anchors.horizontalCenter: parent.horizontalCenter
-                width: parent.width
-                horizontalAlignment: Text.AlignHCenter 
+                style: Text.Outline
+                styleColor: "black"
             }
         }
     }

@@ -1,12 +1,23 @@
 ![Logo](https://github.com/vKaras1337/kde_modernclock/blob/main/assets/logo.jpg)
 
-## Advanced Modern Clock for KDE
+## Better Modern Clock for KDE
 A modern looking clock widget!
 
-![Screenshot en](assets/screenshot_en.png)  
+![Screenshot en](assets/screenshot_en.png)
 ![Screenshot de](assets/screenshot_de.png)
+![Sunday](assets/Sunday.png)
+![Monday](assets/Monday.png)
+![Tuesday](assets/Tuesday.png)
+![Wednesday](assets/Wednesday.png)
+![Thursday](assets/Thursday.png)
+![Friday](assets/Friday.png)
+![Saturday](assets/Saturday.png)
 
 ## Features
+- **Respecting Custom Tile Size:** The fonts now respect the tile size you have placed it on.
+  - It would not increase the width of the widget tile when encountering long day names (like Wednesday or Saturday).
+  - It would rather change the size of the font that is going out of bounds.
+- **Outline:** Added a prominent black outline so that the text would be clearly visibly against light backgrounds.
 - **Localization Support**: Display day and date names in your local language or keep them in English
   - Toggle "Use local name" for day names (e.g., "SAMSTAG" instead of "SATURDAY")
   - Toggle "Use local name" for date formats with localized month names
@@ -24,30 +35,28 @@ A modern looking clock widget!
 2. Click on "Enter Edit Mode "
 3. Click on "Add Widgets"
 4. Click on "Get New Widgets"
-5. Search for "Advanced Modern Clock"
+5. Search for "Better Modern Clock"
 6. Click on "Install" and you're done!
 
 ### From this repository
 
 1. Clone this repository  
-`git clone https://github.com/vKaras1337/kde_modernclock && cd kde_modernclock/`  
+`git clone https://github.com/ProRick2358Y/kde_modernclock && cd kde_modernclock/`  
 2. Install using the script  
 `kpackagetool6 -i package/ -t Plasma/Applet`
 
 ## Credits
 
-This project is a fork of the original [Modern Clock](https://github.com/prayag2/kde_modernclock) by [Prayag Jain](https://github.com/prayag2). I would like to thank the original author for creating this beautiful clock widget and making it open source.
+This project is a fork of a remake by [v'Karas](https://github.com/vKaras1337) at [Advanced Modern Clock for KDE](https://github.com/vKaras1337/kde_modernclock).
 
-The localization feature was inspired by [JortonMV's fork](https://github.com/JortonMV/kde_modernclock/commit/25b87b540ea7903ab4d72174d2f77888d2a7a909). Thanks for the great idea!
+The original is available at [Modern Clock for KDE](https://github.com/prayag2/kde_modernclock) by [Prayag Jain](https://github.com/prayag2). I would like to thank the original author for creating this beautiful open source clock widget.
 
-The custom font selection feature was inspired by [lunar-d's fork](https://github.com/lunar-d/kde_modernclock_fonts/commit/9a881d1e560a2c30c3defde109aaae81fc27baef). Thanks for the implementation!
+The localization done by v'Karas was inspired by [JortonMV's fork](https://github.com/JortonMV/kde_modernclock/commit/25b87b540ea7903ab4d72174d2f77888d2a7a909). Thanks for the great idea!
 
-The custom time format feature was inspired by [YoannDev90's commit](https://github.com/YoannDev90/kde_modernclock/commit/3a737660982985f1aaf1ede2b374c1d2e4f1b8da), which adds seconds-aware refresh cadence.
+The custom font selection feature added by v'Karas was inspired by [lunar-d's fork](https://github.com/lunar-d/kde_modernclock_fonts/commit/9a881d1e560a2c30c3defde109aaae81fc27baef). Thanks for the implementation!
 
-Thanks to [UnknownWitcher](https://github.com/UnknownWitcher) for providing a fix for the centered layout.
+The custom time format feature added by v'Karas was inspired by [YoannDev90's commit](https://github.com/YoannDev90/kde_modernclock/commit/3a737660982985f1aaf1ede2b374c1d2e4f1b8da), which adds seconds-aware refresh cadence.
+
+Thanks to [UnknownWitcher](https://github.com/UnknownWitcher) for providing a fix for the centered layout that was implemented by v'Karas.
 
 This fork combines these improvements while maintaining the modern and clean design of the original.
-
-## Disclaimer
-
-I'm not a QML expert; the features were assembled with help from Google and AI to the best of my knowledge.

@@ -2,18 +2,17 @@
     "KPlugin": {
         "Authors": [
             {
-                "Email": "github@vkaras.de",
-                "Name": "v'Karas"
+                "Name": "ProRick2358Y"
             }
         ],
         "Category": "Date and Time",
-        "Description": "A modern looking clock widget for your Desktop!",
+        "Description": "A Better Modern Clock with adaptive font size based on the tile size.",
         "Icon": "clock",
-        "Id": "com.github.vKaras1337.modernclock",
+        "Id": "org.kde.plasma.bettermodernclock",
         "License": "GPLv3",
-        "Name": "Advanced Modern Clock",
-        "Version": "2.1.0",
-        "Website": "https://github.com/vKaras1337/kde_modernclock"
+        "Name": "Better Modern Clock",
+        "Version": "3.0.1",
+        "Website": "https://github.com/ProRick2358Y/kde_modernclock"
         
     },
     "X-Plasma-API-Minimum-Version": "6.0",

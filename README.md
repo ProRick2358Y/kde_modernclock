@@ -1,7 +1,7 @@
 ![Logo](https://github.com/vKaras1337/kde_modernclock/blob/main/assets/logo.jpg)
 
 ## Better Modern Clock for KDE
-A modern looking clock widget!
+A better version of the Modern Clock Widget.
 
 ![Screenshot en](assets/screenshot_en.png)
 ![Screenshot de](assets/screenshot_de.png)

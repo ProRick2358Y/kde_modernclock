@@ -3,8 +3,6 @@
 ## Better Modern Clock for KDE
 A better version of the Modern Clock Widget.
 
-![Screenshot en](assets/screenshot_en.png)
-![Screenshot de](assets/screenshot_de.png)
 ![Sunday](assets/Sunday.png)
 ![Monday](assets/Monday.png)
 ![Tuesday](assets/Tuesday.png)

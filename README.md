@@ -29,16 +29,26 @@ A better version of the Modern Clock Widget.
 - **Custom Style Characters**: Add decorative characters around the time display
 
 ## Installation
-### KDE Store (Preferred way)
+
+### Built-in KDE Store
 1. Right click on the desktop
-2. Click on "Enter Edit Mode "
-3. Click on "Add Widgets"
+2. Click on "Enter Edit Mode"
+3. Click on "Add or Manage Widgets"
 4. Click on "Get New Widgets"
-5. Search for "Better Modern Clock"
-6. Click on "Install" and you're done!
+5. Click on "Download New Plasma Widgets"
+6. Search for "Better Modern Clock"
+7. Click on "Install" and you're done!
+
+### KDE Store Website
+1. Go to - https://store.kde.org/p/2362044
+2. Click on "Download" and select the latest version.
+3. Right click on the desktop
+4. Click on "Enter Edit Mode"
+5. Click on "Add or Manage Widgets"
+6. Click on "Install Widgets from Local File"
+7. Select the file you just downloaded.
 
 ### From this repository
-
 1. Clone this repository  
 `git clone https://github.com/ProRick2358Y/kde_modernclock && cd kde_modernclock/`  
 2. Install using the script  

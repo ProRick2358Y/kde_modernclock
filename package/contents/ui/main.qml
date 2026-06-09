@@ -9,9 +9,8 @@ import org.kde.plasma.plasma5support as Plasma5Support
 PlasmoidItem {
     id: root
     
-    
-    // setting background as transparent with a drop shadow
-    Plasmoid.backgroundHints: PlasmaCore.Types.ShadowBackground | PlasmaCore.Types.ConfigurableBackground
+    // Dynamically switch between the system shadow and a clean background
+    Plasmoid.backgroundHints: plasmoid.configuration.useSystemShadow ? (PlasmaCore.Types.ShadowBackground | PlasmaCore.Types.ConfigurableBackground) : PlasmaCore.Types.ConfigurableBackground
     
     // loading fonts
     FontLoader {
@@ -151,8 +150,8 @@ PlasmoidItem {
                 font.letterSpacing: plasmoid.configuration.day_letter_spacing
                 font.family: plasmoid.configuration.fontFamilyDay || font_anurati.name
                 color: plasmoid.configuration.day_font_color
-                style: Text.Outline
-                styleColor: "black"
+                style: plasmoid.configuration.showDayOutline ? Text.Outline : Text.Normal
+                styleColor: plasmoid.configuration.showDayOutline ? plasmoid.configuration.dayOutlineColor : "transparent"
 
                 fontSizeMode: Text.Fit
                 minimumPixelSize: 12
@@ -176,8 +175,8 @@ PlasmoidItem {
                 font.letterSpacing: plasmoid.configuration.date_letter_spacing
                 font.family: plasmoid.configuration.fontFamilyDate || font_poppins.name
                 color: plasmoid.configuration.date_font_color
-                style: Text.Outline
-                styleColor: "black"
+                style: plasmoid.configuration.showDateOutline ? Text.Outline : Text.Normal
+                styleColor: plasmoid.configuration.showDateOutline ? plasmoid.configuration.dateOutlineColor : "transparent"
             }
 
             // 3. The Time
@@ -195,8 +194,8 @@ PlasmoidItem {
                 font.family: plasmoid.configuration.fontFamilyTime || font_poppins.name
                 color: plasmoid.configuration.time_font_color
                 font.letterSpacing: plasmoid.configuration.time_letter_spacing
-                style: Text.Outline
-                styleColor: "black"
+                style: plasmoid.configuration.showTimeOutline ? Text.Outline : Text.Normal
+                styleColor: plasmoid.configuration.showTimeOutline ? plasmoid.configuration.timeOutlineColor : "transparent"
             }
         }
     }

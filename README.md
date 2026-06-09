@@ -15,7 +15,8 @@ A better version of the Modern Clock Widget.
 - **Respecting Custom Tile Size:** The fonts now respect the tile size you have placed it on.
   - It would not increase the width of the widget tile when encountering long day names (like Wednesday or Saturday).
   - It would rather change the size of the font that is going out of bounds.
-- **Outline:** Added a prominent black outline so that the text would be clearly visibly against light backgrounds.
+- **Outline:** Added the option to add, remove, or change the color of the outline at the various parts of the widget.
+- **Shadow:** Added the option to add or remove a shadow.
 - **Localization Support**: Display day and date names in your local language or keep them in English
   - Toggle "Use local name" for day names (e.g., "SAMSTAG" instead of "SATURDAY")
   - Toggle "Use local name" for date formats with localized month names

@@ -8,6 +8,13 @@ Kirigami.ScrollablePage {
     id: appearancePage
     
     // properties
+    property alias cfg_useSystemShadow: useSystemShadow.checked
+    property alias cfg_showDayOutline: showDayOutline.checked
+    property alias cfg_dayOutlineColor: dayOutlineColor.color
+    property alias cfg_showDateOutline: showDateOutline.checked
+    property alias cfg_dateOutlineColor: dateOutlineColor.color
+    property alias cfg_showTimeOutline: showTimeOutline.checked
+    property alias cfg_timeOutlineColor: timeOutlineColor.color
     property alias cfg_show_day: showDay.checked
     property alias cfg_use_local_day_name: useLocalDayName.checked
     property alias cfg_show_date: showDate.checked
@@ -44,6 +51,28 @@ Kirigami.ScrollablePage {
     }
 
     Kirigami.FormLayout {
+        Title {
+            title: i18n("Global Style")
+        }
+        RowLayout {
+            Label {
+                text: i18n("Use Soft System Shadow")
+            }
+            CheckBox {
+                id: useSystemShadow
+            }
+        }
+        RowLayout {
+            Label {
+                text: ""
+            }
+            Label {
+                text: i18n("Note: Turn this off if you are using text outlines, otherwise they look blurry.")
+                font.pointSize: -1
+                font.pixelSize: 10
+                opacity: 0.8
+            }
+        }
         Title {
             title: i18n("Day")
         }
@@ -113,6 +142,19 @@ Kirigami.ScrollablePage {
             id: dayFontColor
             color: cfg_day_font_color
         }
+        RowLayout {
+            Label {
+                text: i18n("Show Outline")
+            }
+            CheckBox {
+                id: showDayOutline
+            }
+        }
+        ColorDial {
+            id: dayOutlineColor
+            color: cfg_dayOutlineColor
+        }
+
         Title {
             title: i18n("Date")
         }
@@ -189,6 +231,18 @@ Kirigami.ScrollablePage {
         ColorDial {
             id: dateFontColor
             color: cfg_date_font_color
+        }
+        RowLayout {
+            Label {
+                text: i18n("Show Outline")
+            }
+            CheckBox {
+                id: showDateOutline
+            }
+        }
+        ColorDial {
+            id: dateOutlineColor
+            color: cfg_dateOutlineColor
         }
 
         Title {
@@ -285,6 +339,18 @@ Kirigami.ScrollablePage {
         ColorDial {
             id: timeFontColor
             color: cfg_time_font_color
+        }
+        RowLayout {
+            Label {
+                text: i18n("Show Outline")
+            }
+            CheckBox {
+                id: showTimeOutline
+            }
+        }
+        ColorDial {
+            id: timeOutlineColor
+            color: cfg_timeOutlineColor
         }
     }
 }

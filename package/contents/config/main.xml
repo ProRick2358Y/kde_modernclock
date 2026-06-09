@@ -6,6 +6,27 @@
       http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
     <kcfgfile name=""/>
     <group name="Appearance">
+        <entry name="useSystemShadow" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="showDayOutline" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="dayOutlineColor" type="String">
+            <default>#000000</default>
+        </entry>
+        <entry name="showDateOutline" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="dateOutlineColor" type="String">
+            <default>#000000</default>
+        </entry>
+        <entry name="showTimeOutline" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="timeOutlineColor" type="String">
+            <default>#000000</default>
+        </entry>
         <entry name="fontFamilyDay" type="String">
             <label>Font family. e.g "arial". The system font is used if this is not set.</label>
             <default>Anurati</default>
